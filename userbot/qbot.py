@@ -7,7 +7,7 @@ from userbot import bot
 from userbot.utils import friday_on_cmd
 
 
-# @register(outgoing=True, pattern="^.c(?: |$)(.*)")
+# @register(outgoing=True, pattern="^.q(?: |$)(.*)")
 @friday.on(friday_on_cmd(pattern=r"creasticker(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:

@@ -1,4 +1,4 @@
-"""QuotLy: Avaible commands: .creasticker
+"""QuotLy: Avaible commands: .qbot
 """
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -8,7 +8,7 @@ from userbot.utils import friday_on_cmd
 
 
 # @register(outgoing=True, pattern="^.q(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern=r"creasticker(?: |$)(.*)"))
+@friday.on(friday_on_cmd(pattern=r"qbot(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return

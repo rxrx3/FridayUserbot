@@ -9,7 +9,7 @@ from userbot.utils import admin_cmd
 
 #@register(outgoing=True, pattern="^.q(?: |$)(.*)")
 @borg.on(admin_cmd(pattern=r"creasticker(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="creasticker ?(.*)", allow_sudo=True))
+@borg.on(sudo_cmd(pattern="creasticker ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 

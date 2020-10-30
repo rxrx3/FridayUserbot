@@ -1,6 +1,6 @@
 """Make / Download Telegram Sticker Packs without installing Third Party applications
 Available Commands:
-.kang [Optional Emoji]
+.salvasticker [Optional Emoji]
 .packinfo
 .getsticker"""
 import asyncio
@@ -29,8 +29,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Who is this"
 FILLED_UP_DADDY = "Invalid pack selected."
 
 
-@friday.on(friday_on_cmd(pattern="kang ?(.*)"))
-@friday.on(sudo_cmd(pattern="kang ?(.*)", allow_sudo=True))
+@friday.on(friday_on_cmd(pattern="salvasticker ?(.*)"))
+@friday.on(sudo_cmd(pattern="salvasticker ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -48,15 +48,15 @@ async def _(event):
         user.username = user.id
     pack = 1
     userid = event.sender_id
-    # packname = f"FRIDAY PACK"
-    # packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
+    # packname = f"Nazland Pack 🎪"
+    # packshortname = f"NazlandPack"  # format: Uni_Borg_userid
     if userid == 1263617196:
         packname = f"@StarkGang Packs 🎭"
         packshortname = "StarkGangPack"
     else:
-        packname = f"@{user.username} KangPack {pack}"
-        packshortname = f"FRIDAY_{userid}_Pack"
-    await moods.edit("`This Sticker is Gonna Get Stolen.....`")
+        packname = f"Nazland Pack 🎪 {pack}"
+        packshortname = f"NazlandPack"
+    await moods.edit("**✅ Sto salvando lo sticker...**")
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@FRIDAYOT.png"

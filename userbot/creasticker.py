@@ -1,4 +1,4 @@
-"""QuotLy: Avaible commands: .qbot
+"""QuotLy: Avaible commands: .creasticker
 """
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -8,7 +8,7 @@ from userbot.utils import friday_on_cmd
 
 
 # @register(outgoing=True, pattern="^.q(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern=r"qbot(?: |$)(.*)"))
+@friday.on(friday_on_cmd(pattern=r"creasticker(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -21,7 +21,7 @@ async def _(event):
     if reply_message.sender.bot:
         await event.edit("```Reply to actual users message.```")
         return
-    await event.edit("```Making a Quote```")
+    await event.edit("**✅ Creazione sticker in corso...**")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(
